@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <utility>
 #include <filesystem>// cpp 17 reference https://en.cppreference.com/w/cpp/filesystem/current_paths
-#include "../header Files/databaseAbstraction.h"
+#include "databaseAbstractionHeaderOnlyLibrary.h"
 
 
 namespace fs = std::filesystem;
@@ -12,7 +12,7 @@ using namespace std;
 
 // FILE NAMES
 const string CURRENT_FULL_PATH = fs::current_path().string();
-const string DATABASE_NAME_WITH_PATH = CURRENT_FULL_PATH + "\\Test Files\\Executables\\bam_bam.db";       // Has to be a constant char to be compatibe with sqlite
+const string DATABASE_NAME_WITH_PATH = CURRENT_FULL_PATH + "\\bam_bam.db";       // Has to be a constant char to be compatibe with sqlite
 
 const char* DATABASE_NAME = DATABASE_NAME_WITH_PATH.c_str();
 
@@ -211,6 +211,11 @@ void addData()
     {
         cout << error << endl;
     }
+    catch(...)
+    {
+        cout << "UNKNOWN EXCEPTION CAUGHT "<< endl; 
+        
+    }
 
     cout << "hello in add data" << endl;
     
@@ -337,8 +342,8 @@ void addSingleData()
 int main()
 {
     cout << DATABASE_NAME_WITH_PATH << endl;
-    // getData();
-    // addData<string>();
+    addData<string>();
+    getData();
     // update();
     // deleteValue();
     addSingleData();
