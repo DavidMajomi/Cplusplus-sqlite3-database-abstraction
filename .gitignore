@@ -1,0 +1,5 @@
+#Ignore sqlite3.h header file
+sqlite3.h
+
+# Ignore all vscode files
+/.vscode
