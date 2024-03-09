@@ -3,3 +3,6 @@ sqlite3.h
 
 # Ignore all vscode files
 /.vscode
+
+#ignore all database files
+*.db
