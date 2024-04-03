@@ -6,3 +6,6 @@ sqlite3.h
 
 #ignore all database files
 *.db
+
+#ignore all exe files
+*.exe
