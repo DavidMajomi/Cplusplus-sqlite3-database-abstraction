@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.10)
+project(databaseAbstraction)
+
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 20)
+
+
+set (FullOutputDir "${CMAKE_SOURCE_DIR}/bin/${CMAKE_SYSTEM_NAME}/${CMAKE_BUILD_TYPE}")
+set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${FullOutputDir}/static libs") #For static libs
+set (CMAKE_LIBRARY_OUTPUT_DIRECTORY "${FullOutputDir}")
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${FullOutputDir}")
+
+include_directories(includes)
+
+add_executable(testDbAbstraction 
+    Src/testDbAbstraction.cpp 
+    Src/databaseAbstraction.cpp
+    sqlite3.o
+)
+
+link_directories(${CMAKE_BINARY_DIR}/Debug)
