@@ -9,3 +9,13 @@ sqlite3.h
 
 #ignore all exe files
 *.exe
+
+# Ignore all build files
+/build
+
+# Ignore all bin files
+/bin
+
+# Ignore cmake files folder
+/CMakeFiles
+
