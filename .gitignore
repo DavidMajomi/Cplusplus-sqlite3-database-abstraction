@@ -19,3 +19,6 @@ sqlite3.h
 # Ignore cmake files folder
 /CMakeFiles
 
+*.cmake
+CMakeCache.txt
+Makefile
