@@ -168,7 +168,7 @@ void addData()
     dataToAdd[0][19].second = dataType;
     dataToAdd[0][20].second = typeid(string).name();
     
-    cout << "DOne populating" << endl;
+    // cout << "DOne populating" << endl;
     
     try
     {
@@ -182,7 +182,7 @@ void addData()
         " adjusted_loan_viability_score, matrix_based_adjusted_loan_viability_score, interest_rate_by_group, best_possible_rate, worst_possible_rate, final_loan_grade)",
         dataToAdd);
 
-        cout << "Done with: " << 1  << " time: " << timeInMilliSeconds << endl; 
+        // cout << "Done with: " << 1  << " time: " << timeInMilliSeconds << endl; 
         databaseAbstraction::storeDataInDbUsingSingleTransaction(DATABASE_NAME, 
         "CREATE TABLE IF NOT EXISTS shabo (Loan_id INTEGER PRIMARY KEY, name TEXT, time_of_application TEXT, credit_score INTEGER, monthly_income REAL, financial_reserves REAL, debt_to_income_ratio REAL,"
         " loan_duration REAL, requested_loan_amount REAL, monthly_interest_rate REAL, yearly_interest_rate REAL, loss_given_default REAL, recovery_rate REAL,"
@@ -193,7 +193,7 @@ void addData()
         " adjusted_loan_viability_score, matrix_based_adjusted_loan_viability_score, interest_rate_by_group, best_possible_rate, worst_possible_rate, final_loan_grade)",
         dataToAdd);
 
-        cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
+        // cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
         databaseAbstraction::storeDataInDbUsingSingleTransaction(DATABASE_NAME, 
         "CREATE TABLE IF NOT EXISTS shabo (Loan_id INTEGER PRIMARY KEY, name TEXT, time_of_application TEXT, credit_score INTEGER, monthly_income REAL, financial_reserves REAL, debt_to_income_ratio REAL,"
         " loan_duration REAL, requested_loan_amount REAL, monthly_interest_rate REAL, yearly_interest_rate REAL, loss_given_default REAL, recovery_rate REAL,"
@@ -204,7 +204,7 @@ void addData()
         " adjusted_loan_viability_score, matrix_based_adjusted_loan_viability_score, interest_rate_by_group, best_possible_rate, worst_possible_rate, final_loan_grade)",
         dataToAdd);
 
-        cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
+        // cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
     
     }
     catch(const char * error)
@@ -212,9 +212,10 @@ void addData()
         cout << error << endl;
     }
 
-    cout << "hello in add data" << endl;
+    // cout << "hello in add data" << endl;
     
 }
+
 
 template <typename T>
 void addData()
@@ -233,7 +234,7 @@ void addData()
            interestRateByGroup = "30", bestPossibleRate = "8.33", worstPossibleRate = "30";
     string dataType = typeid(double).name();
 
-    cout << " In add data" << endl;
+    // cout << " In add data" << endl;
 
     // Populate vector with data
     dataToAdd[0][0].first = name;
@@ -340,7 +341,7 @@ void addData()
         " adjusted_loan_viability_score, matrix_based_adjusted_loan_viability_score, interest_rate_by_group, best_possible_rate, worst_possible_rate, final_loan_grade)",
         dataToAdd);
 
-        cout << "Done with: " << 1  << " time: " << timeInMilliSeconds << endl; 
+        // cout << "Done with: " << 1  << " time: " << timeInMilliSeconds << endl; 
         databaseAbstraction::storeDataInDbUsingSingleTransaction(DATABASE_NAME, 
         "CREATE TABLE IF NOT EXISTS shabo (Loan_id INTEGER PRIMARY KEY, name TEXT, time_of_application TEXT, credit_score INTEGER, monthly_income REAL, financial_reserves REAL, debt_to_income_ratio REAL,"
         " loan_duration REAL, requested_loan_amount REAL, monthly_interest_rate REAL, yearly_interest_rate REAL, loss_given_default REAL, recovery_rate REAL,"
@@ -351,7 +352,7 @@ void addData()
         " adjusted_loan_viability_score, matrix_based_adjusted_loan_viability_score, interest_rate_by_group, best_possible_rate, worst_possible_rate, final_loan_grade)",
         dataToAdd);
 
-        cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
+        // cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
         databaseAbstraction::storeDataInDbUsingSingleTransaction(DATABASE_NAME, 
         "CREATE TABLE IF NOT EXISTS shabo (Loan_id INTEGER PRIMARY KEY, name TEXT, time_of_application TEXT, credit_score INTEGER, monthly_income REAL, financial_reserves REAL, debt_to_income_ratio REAL,"
         " loan_duration REAL, requested_loan_amount REAL, monthly_interest_rate REAL, yearly_interest_rate REAL, loss_given_default REAL, recovery_rate REAL,"
@@ -362,7 +363,7 @@ void addData()
         " adjusted_loan_viability_score, matrix_based_adjusted_loan_viability_score, interest_rate_by_group, best_possible_rate, worst_possible_rate, final_loan_grade)",
         dataToAdd);
 
-        cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
+        // cout << " Done with: " << 3 << " time: " << timeInMilliSeconds << endl; 
     
     }
     catch(const char * error)
@@ -370,11 +371,9 @@ void addData()
         cout << error << endl;
     }
 
-    cout << "hello in add data" << endl;
+    // cout << "hello in add data" << endl;
     
 }
-
-
 
 
 void update()
@@ -560,7 +559,6 @@ int main()
     system("mkdir Databases");
     cout << DATABASE_NAME << endl;
     int value;
-    update();
     deleteValue();
     getData();
     for(int count = 0; count < 25; count++)
@@ -570,6 +568,7 @@ int main()
         // addData();
     }
     retreiveData();
+    update();
     
     addColumn();
     cout << "Validating new column exists " << endl;
