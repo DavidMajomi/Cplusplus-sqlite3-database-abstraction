@@ -1,5 +1,5 @@
 # Why does this exist <br>
-- I was am working on multiple projects that require a simple database, so why not work on an abstraction that can work on multiple projects. <br>
+- I was working on multiple projects that require a simple database, so why not work on an abstraction that can work on multiple projects. <br>
 
 # When to use <br>
 - You are a beginner in cplusplus who just wants something that works without concern for efficiency or build systems. <br>
