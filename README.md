@@ -1,3 +1,8 @@
+# Database Abstraction Library
+This is a lightweight C++ library that provides a simplified interface for performing common database operations using SQLite. With this library, you can interact with SQLite databases, retrieve data, validate input, and perform basic CRUD operations.
+
+
+
 # Why does this exist <br>
 - I was working on multiple projects that require a simple database, so why not work on an abstraction that can work on multiple projects. <br>
 
@@ -5,33 +10,18 @@
 - You are a beginner in cplusplus who just wants something that works without concern for efficiency or build systems. <br>
 - You you want a simple library that works while still in the ideation stage before you build or use something else more comprehensive / suitable for the project. <br>
 
-# Features / Functions <br>
-- vector <vector<string>> retrieveAllUserDataFromDatabaseForMatrix(const char * databaseFullPath, string tableName);
+# Features<br>
+- Retrieve data from tables in matrix form <br>
+- Insert, update, and delete rows and columns <br>
+- Validate numeric data types <br>
+- Use transactions for efficient data insertion <br>
+- Easy integration with SQLite databases <br>
 
-- int getTheNumbersOfColumnsInTable(const char * databaseFullPath, string tableName);
+Dependencies
+- SQLite3: Ensure you have the SQLite3 library installed and available.<br>
 
-- int getTheNumbersOfRowsInTable(const char * databaseFullPath, string tableName);
-
-- vector <vector<string>> retreiveDataWithMatchingValue(const char * databaseFullPath, string tableName, string id, string idValue) ;
-
-- bool validateStringIsDigit(string value);
-
-- bool isValidNumber(T value);
-
-- double storeDataInDbUsingSingleTransaction(const char * databaseFullPath, string sqlInsertFormat, string sqlInsertTableNames, vector<vector <pair <T, string>>> matrixData);
-
-- double storeDataInDbUsingSingleTransaction(const char * databaseFullPath, string sqlInsertFormat, string sqlInsertTableNames, vector<vector <pair <string, string>>> matrixData);
-
-- double update(const char * databaseFullPath, string tableName, string columnName, string newColumnValue, string primaryKey, int keyValue);
-
-- double deleteRow(const char * databaseFullPath, string tableName, string columnName, string primaryKey, int keyValue);
-
-- double addNewColumn(const char * databaseFullPath, string tableName, string columnName, string sqliteDataType);
-
-- double deleteColumn(const char * databaseFullPath, string tableName, string columnName);
-
-- double storeSingleRowInDbUsingSingleInsert(const char * databaseFullPath, string sqlInsertFormat, string sqlInsertTableNames, string singleValueToInsert);
-
-- double storeMultiRowsUsingConcatenatedInsertStmt(const char * databaseFullPath, string sqlInsertFormat, string sqlInsertTableNames, string singleValueToInsert);
-
-- double deleteAllTableRows(const char * databaseFullPath, string tableName);
+# Key Functions <br>
+1. Data Retrieval
+  - Retrieve All Data as Matrix
+    Fetches all data from a specified table.
+    vector<vector<string>> data = retrieveAllUserDataFromDatabaseForMatrix("database_path", "table_name");
