@@ -22,6 +22,6 @@ Dependencies
 
 # Key Functions <br>
 1. Data Retrieval
-  - Retrieve All Data as Matrix
-    Fetches all data from a specified table.
-    vector<vector<string>> data = retrieveAllUserDataFromDatabaseForMatrix("database_path", "table_name");
+  - Retrieve All Data as Matrix <b>
+    Fetches all data from a specified table.<br>
+    `vector<vector<string>> data = databaseAbstraction::retrieveAllUserDataFromDatabaseForMatrix("database_path", "table_name");`
