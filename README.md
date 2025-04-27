@@ -93,5 +93,4 @@ This is a lightweight C++ library that provides a simplified interface for perfo
      Removes a column from the table.  
      ```cpp
      double result = databaseAbstraction::deleteColumn("database_path", "table_name", "column_name");
-    ```
-
+     ```
